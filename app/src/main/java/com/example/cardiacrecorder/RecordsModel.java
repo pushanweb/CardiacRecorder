@@ -1,5 +1,8 @@
 package com.example.cardiacrecorder;
 
+/**
+ * This is a class that keeps track of the records
+ */
 public class RecordsModel {
     String date;
     String time;
@@ -9,18 +12,25 @@ public class RecordsModel {
     String comments;
     String key;
 
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
-    }
-
     public RecordsModel(){
 
     }
 
+    /**
+     * This adds a city to the list if that city does not exist
+     * @param date
+     *             set date
+     * @param time
+     *             set time
+     * @param diastolic
+     *             set diastolic
+     * @param systolic
+     *             set systolic
+     * @param heartRate
+     *              set heartRate
+     * @param comments
+     *              set comments
+     */
     public RecordsModel(String date, String time, String diastolic, String systolic, String heartRate, String comments, String key) {
         this.date = date;
         this.time = time;
@@ -31,51 +41,66 @@ public class RecordsModel {
         this.key = key;
     }
 
+    /**
+     * This returns the key
+     * @return
+     *      Return the key
+     */
+    public String getKey() {
+        return key;
+    }
+
+    /**
+     * This returns the date
+     * @return
+     *      Return the date
+     */
     public String getDate() {
         return date;
     }
 
-    public void setDate(String date) {
-        this.date = date;
-    }
-
+    /**
+     * This returns the time
+     * @return
+     *      Return the time
+     */
     public String getTime() {
         return time;
     }
 
-    public void setTime(String time) {
-        this.time = time;
-    }
-
+    /**
+     * This returns the Diastolic
+     * @return
+     *      Return the Diastolic
+     */
     public String getDiastolic() {
         return diastolic;
     }
 
-    public void setDiastolic(String diastolic) {
-        this.diastolic = diastolic;
-    }
-
+    /**
+     * This returns the Systolic
+     * @return
+     *      Return the Systolic
+     */
     public String getSystolic() {
         return systolic;
     }
 
-    public void setSystolic(String systolic) {
-        this.systolic = systolic;
-    }
-
+    /**
+     * This returns the heartRate
+     * @return
+     *      Return the heartRate
+     */
     public String getHeartRate() {
         return heartRate;
     }
 
-    public void setHeartRate(String heartRate) {
-        this.heartRate = heartRate;
-    }
-
+    /**
+     * This returns the comments
+     * @return
+     *      Return the comments
+     */
     public String getComments() {
         return comments;
-    }
-
-    public void setComments(String comments) {
-        this.comments = comments;
     }
 }
