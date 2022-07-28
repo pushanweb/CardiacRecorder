@@ -68,7 +68,7 @@ public class HomeActivity extends AppCompatActivity implements SelectListener{
     /**
      * gets the RecordModel object on Item click
      * @param recordModel
-     *
+     *          The recordModel is fetched and passed to Details intent
      */
     @Override
     public void onItemClicked(RecordsModel recordModel) {

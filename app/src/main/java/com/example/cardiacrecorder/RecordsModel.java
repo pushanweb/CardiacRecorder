@@ -1,9 +1,12 @@
 package com.example.cardiacrecorder;
 
+import java.io.Serializable;
+import java.util.Objects;
+
 /**
  * This is a class that keeps track of the records
  */
-public class RecordsModel {
+public class RecordsModel implements Serializable, Comparable<RecordsModel>{
     String date;
     String time;
     String diastolic;
@@ -39,6 +42,27 @@ public class RecordsModel {
         this.heartRate = heartRate;
         this.comments = comments;
         this.key = key;
+    }
+
+    /**
+     * Check if two Measurement object are equals
+     * @param o
+     *      another object o
+     * @return
+     *      return if both are equals or not
+     */
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        RecordsModel that = (RecordsModel) o;
+        return systolic == that.systolic && diastolic == that.diastolic && heartRate == that.heartRate && date.equals(that.date) && time.equals(that.time) && Objects.equals(comments, that.comments);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(date, time, systolic, diastolic, heartRate, comments);
     }
 
     /**
@@ -103,4 +127,16 @@ public class RecordsModel {
     public String getComments() {
         return comments;
     }
+
+    /**
+     *
+     * @param record
+     *
+     * @return
+     */
+    @Override
+    public int compareTo(RecordsModel record) {
+        return this.time.compareTo(record.getTime());
+    }
+
 }

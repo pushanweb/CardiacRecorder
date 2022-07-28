@@ -6,7 +6,6 @@ import java.util.List;
 /**
  * This is a class that keeps track of list of Record
  */
-
 public class RecordList {
     List<RecordsModel> records = new ArrayList<>();
 
@@ -15,7 +14,6 @@ public class RecordList {
      * @param record
      *      This is the record to add
      */
-
     public void add(RecordsModel record)
     {
         if(records.contains(record))
@@ -30,7 +28,6 @@ public class RecordList {
      * @param record
      *      This is the record to delete
      */
-
     public void remove(RecordsModel record)
     {
         if(records.contains(record))
@@ -50,7 +47,6 @@ public class RecordList {
      * @param record
      *      the record which will update the values
      */
-
     public void edit(int pos, RecordsModel record)
     {
         records.set(pos,record);
@@ -61,7 +57,6 @@ public class RecordList {
      * @return
      *      return the list
      */
-
     public List<RecordsModel>getRecord()
     {
         return records;
