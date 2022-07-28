@@ -64,33 +64,6 @@ public class HomeActivity extends AppCompatActivity implements SelectListener{
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    @Override
-    protected void onStart(){
-        super.onStart();
-        RecyclerView recyclerView = findViewById(R.id.recyclerView2);
-
-        DatabaseReference myref = FirebaseDatabase.getInstance().getReference("Records");
-        myref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot ds : snapshot.getChildren()){
-                    recordArray.add(new RecordsModel(
-                            ds.child("Date").getValue().toString(),
-                            ds.child("Time").getValue().toString(),
-                            ds.child("Diastolic").getValue().toString(),
-                            ds.child("Systolic").getValue().toString(),
-                            ds.child("Heart Rate").getValue().toString(),
-                            ds.child("Comments").getValue().toString(),
-                            ds.getKey()));
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(HomeActivity.this,"Cancelled",Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
 
     /**
      * gets the RecordModel object on Item click

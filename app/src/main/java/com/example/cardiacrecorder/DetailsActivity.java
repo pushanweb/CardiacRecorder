@@ -74,7 +74,7 @@ public class DetailsActivity extends AppCompatActivity {
                 main.put("Diastolic",Diastolic.getText().toString());
                 main.put("Heart Rate",HeartRate.getText().toString());
                 main.put("Comments",Comment.getText().toString());
-                recordDb.child(Calendar.getInstance().getTime().toString()).setValue(main).addOnSuccessListener(new OnSuccessListener<Void>() {
+                recordDb.child(key).setValue(main).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
                         Toast.makeText(DetailsActivity.this,"Updated",Toast.LENGTH_SHORT).show();
