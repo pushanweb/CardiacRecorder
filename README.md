@@ -17,6 +17,8 @@ The app allows the user to:
 * delete a measurement 
 * see unusual blood pressures highlighted or flagged. 
 
-**N.B.:** Normal pressures are systolic between 90 and 140 and diastolic between 60 and 90. 
+**N.B.:** Normal pressures are systolic between 90 and 140 and diastolic between 60 and 90.
+
+# UI Mock Up
 
 ![UI MockUp](https://user-images.githubusercontent.com/61117657/181684787-128bfd0d-dfbe-4ffe-a3db-def77605ac34.PNG)
